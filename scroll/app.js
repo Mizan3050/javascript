@@ -45,7 +45,6 @@ const hasMoreQoutes = (page, limit, total) => {
 
 const loadQuotes = async (page, limit) => {
   showLoader();
-  /*   setTimeout(async () => { */
   try {
     if (hasMoreQoutes(page, limit, total)) {
       const response = await getQuotes(page, limit);
@@ -57,8 +56,6 @@ const loadQuotes = async (page, limit) => {
   } finally {
     hideLoader();
   }
-  /*   }
-  , 500); */
 };
 
 window.addEventListener("scroll", (e) => {
