@@ -1,0 +1,164 @@
+<style>
+    .i-frame {
+        height: 400px;
+        width: 300px;
+    }
+</style>
+<iframe class="i-frame"> </iframe>
+<script>
+  const htmlSrc = `<style>
+    :root {
+      --background-color-template-7974: #f5f8fa;
+      --primary-color-template-6052: #f20000;
+    }
+  </style>
+  <div
+    id="template-container"
+    style="
+      font-family: 'Montserrat', sans-serif;
+      color: #262e2e;
+      box-sizing: border-box;
+      background-color: var(--background-color-template-7974);
+      margin: 0;
+      padding: 40px 0px;
+    "
+  >
+    <table
+      width="100%"
+      style="
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+        background-color: #ffffff;
+      "
+      align="center"
+      cellpadding="0"
+      cellspacing="0"
+    >
+      <table
+        width="100%"
+        style="
+          width: 100%;
+          max-width: 600px;
+          margin: auto;
+          background-color: #ffffff;
+          font-family: 'Montserrat', sans-serif;
+        "
+        align="center"
+        cellpadding="0"
+        cellspacing="0"
+      >
+        <tr>
+          <td
+            align="center"
+            style="
+              background-image: url(https://assets.hyperinvento.com/hyperinventory_admin/assets/images/core/promo-bg-1-v2.png);
+              background-position: top left;
+              background-repeat: no-repeat;
+              background-size: 100%;
+              height: 520px;
+            "
+          >
+            <a
+              href="https://devgarmin.hyperinvento.com"
+              style="display: block; margin-bottom: 60px"
+            >
+              <img
+                src="https://s3-ap-south-1.amazonaws.com/dev-hyper-media/companies/5d1a6079-b7a5-4f3b-81e5-2330dd80cee3/others/logos/files/abaef303957f42238f7f72ef2c11f694-other-logo.png"
+                width="120"
+              />
+            </a>
+            <p
+              id="template-heading"
+              style="
+                font-family: 'Montserrat', sans-serif;
+                font-size: 28px;
+                color: #262e2e;
+                font-weight: 600;
+                line-height: 34px;
+                letter-spacing: 0.25px;
+                padding-bottom: 60px;
+                margin: 0;
+                max-width: 312px;
+              "
+            >
+              SAVE 20% ON YOUR NEXT ORDER
+            </p>
+            <p
+              id="template-body-text"
+              style="
+                font-family: 'Montserrat', sans-serif;
+                font-size: 16px;
+                color: #262e2e;
+                font-weight: 500;
+                line-height: normal;
+                padding: 0px 60px;
+                letter-spacing: 0.25px;
+                max-width: 405px;
+                margin: 0;
+              "
+            >
+              This offer is valid for a limited time. Don’t miss out and visit
+              our store now.
+            </p>
+            <div style="margin-top: 50px">
+              <a
+                id="template-button-text"
+                href="{promotional_button_url}"
+                style="
+                  background-color: var(--primary-color-template-6052);
+                  font-family: 'Montserrat', sans-serif;
+                  font-size: 18px;
+                  font-weight: 500;
+                  color: #ffffff;
+                  padding: 12px 25px;
+                  border-radius: 4px;
+                  text-decoration: none;
+                  letter-spacing: 0.25px;
+                "
+                >SHOP NOW & SAVE</a
+              >
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" style="padding-bottom: 20px">
+            <div style="background: #f5f8fa; height: 2px"></div>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" style="padding-bottom: 20px">
+            <p
+              id="unsubscribe_link_template"
+              style="
+                font-family: 'Montserrat', sans-serif;
+                font-size: 12px;
+                font-weight: 500;
+                margin: 0;
+                opacity: 0.5;
+              "
+            >
+              Keep on missing out amazing emails fromMeezan DevSet? <br />
+              Please
+              <a
+                href="{unsubscribe_link}"
+                style="cursor: pointer; color: #003774"
+              >
+                unsubscribe here</a
+              >
+            </p>
+          </td>
+        </tr>
+      </table>
+    </table>
+  </div>`;
+
+  function applyHTML(){
+    const tag = document.getElementsByClassName('i-frame');
+    tag[0].setAttribute('srcdoc', htmlSrc);
+    const doc = tag[0];
+    console.log({d:tag[0].contentWindow});
+  }
+
+  applyHTML();
+</script>
